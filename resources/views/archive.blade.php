@@ -32,8 +32,7 @@
                 <span class="d-flex justify-content-center">
                     <!-- pour l'affichage sur le profil -->
                     <span class="col-1 ">
-                        <img src="{{('/images/post/'.$_SESSION['photo'])}}" alt="image" srcset="" style="height:90px;width:100%;border-radius:120px; ">
-
+                        <img src="/image/lucifer.JPG" class="rounded-circle" height="80" width="80" alt="">
                         <p class="fs-6">{{ $_SESSION['matricule'] }}</p>
                     </span>
 

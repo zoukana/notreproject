@@ -24,26 +24,21 @@
 
 <body style="background-color:rgba(156, 156, 163, 1)">
     @csrf
-
+    <a href="admin.php"><span class="material-symbols-outlined">
+            keyboard_return
+        </span></a>
     <div class="container border-danger bg-white pt-1">
         <div class="container admin col-lg-12 mt-5">
             <div class="row text-white btn-lg text-center mt-2 bg-primary">
                 <span class="d-flex justify-content-center">
                     <!-- pour l'affichage sur le profil -->
                     <span class="col-1 ">
-
-                        <img src="{{('/images/post/'.$_SESSION['photo'])}}" alt="image" srcset="" style="height:90px;width:100%;border-radius:120px; ">
-
-
-                     </span>
-
-
-                      <span class="d-flex  mt-4  w-50" style="max-height: 2rem;">
-                        <span>{{$_SESSION['matricule']}}</span>
-                       <span>{{$_SESSION['prenom']}}</span>
-                       <br>
-                       <br>
-                       <span>{{$_SESSION['nom']}}</span>
+<img src="/images/post/{{$_SESSION['photo']}}" alt="" srcset="" style="height:100px;width:100px;border-radius:100px;">
+                        <p class="fs-6">{{ $_SESSION['matricule'] }}</p>
+                    </span>
+                    <span class="d-flex  mt-4  w-50" style="max-height: 2rem;">
+                        <span>{{ $_SESSION['nom'] }}</span>&nbsp;
+                        <span>{{ $_SESSION['prenom'] }}</span>
 
                          <span style="margin-left: 4rem">
 
