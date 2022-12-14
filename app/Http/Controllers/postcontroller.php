@@ -80,6 +80,7 @@ class postcontroller extends Controller
         $res->date_inscription = date('y-m-d');
         $res->date_modification = null;
         $res->date_archivage = null;
+        //insertion image
         if($request->hasFile('file')){
             $file= $request->file('file');
             $extension = $file ->getClientOriginalExtension();

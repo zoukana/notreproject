@@ -245,6 +245,7 @@ class PostController extends Controller
    {
        $users = assane::findOrFail($id);
        $users->etat = 0;
+       $users->date_archivage = date('y-m-d');
        $users->save();
        return redirect("api/post");
    }
