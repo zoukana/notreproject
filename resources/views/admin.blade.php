@@ -86,6 +86,4 @@
             }
         </style>
         @endsection
-{{-- </body>
 
-</html> --}}
