@@ -88,8 +88,7 @@ class postcontroller extends Controller
             $res->photo=$filename;}
             else{
               return $request;
-
-              $user->photo='';
+            $user->photo='';
             }
         $res->etat = 1;
         $res->save();

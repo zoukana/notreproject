@@ -9,7 +9,7 @@
                 <div class="d-flex justify-content-space-between">
                     <!-- pour l'affichage sur le profil -->
                     <div class="">
-                        <img src="/images/post/ {{$_SESSION['photo']}}" alt="" srcset="" style="height:100px;width:100px;border-radius:100px;">
+                         <img src="/images/post/{{$_SESSION['photo']}}" alt="" srcset="" style="height:100px;width:100px;border-radius:100px;">
                         <p class="fs-6">{{ $_SESSION['matricule'] }}</p>
 
                     </div>
@@ -18,8 +18,8 @@
                         {{-- <p>{{ $_SESSION['role'] }} </p> --}}
                     </div>
                     <div class="my-5">
-                        <a href="/" class="m-2"><i class="bi bi-box-arrow-right text-white "
-                            style="font-size:20px; margin-left: 200px;"> Deconnexion</i>
+                        <a href="deconnexion" class="m-2"><i class="bi bi-box-arrow-right text-white "
+                            style="font-size:20px; margin-left: 200px; margin-top:05px;"> Deconnexion</i>
                         </a>
                     </div>
                 </div>
