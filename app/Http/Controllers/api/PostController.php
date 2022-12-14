@@ -18,7 +18,7 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    
+
     {
         /*ici la session_start dans cette index permet de démarrer au niveau de espace admin
         pour l'affichage du nom,prenom et matricule*/
@@ -55,7 +55,8 @@ class PostController extends Controller
 
         $search = \Request::get('nom');
 
-        $users = assane::where('nom','like','%'.$search.'%')
+        $users = assane::where('nom','like','%'.$search.'%')->where('matricule', '!=' , $_SESSION['matricule'])->where("etat", '=', 1)->where('role','=','user_simple')
+            ->orderBy('nom')
             ->orderBy('nom')
             ->paginate(5);
 
