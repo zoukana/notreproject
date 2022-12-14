@@ -128,6 +128,7 @@ class postcontroller extends Controller
             $_SESSION['nom']= $user->nom;
             $_SESSION['prenom'] = $user->prenom;
             $_SESSION['matricule'] = $user->matricule;
+            $_SESSION['photo'] = $user->photo;
             $users = assane::where('matricule', '!=' , $_SESSION['matricule'])->where('etat', '=', "1")->paginate(8);
             return redirect('/api/userSimple');}
             else{
