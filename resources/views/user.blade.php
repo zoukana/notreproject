@@ -14,10 +14,10 @@
                     <div class="">
                         <img src="/images/post/{{$_SESSION['photo']}}" alt="" srcset="" style="height:100px;width:100px;border-radius:100px;">
                         <p class="fs-6">{{ $_SESSION['matricule'] }}</p>
+                        <p class="fs-6">{{ $_SESSION['role'] }} </p>
                     </div>
                     <div class="d-flex  m-4  w-50">
                         <h3>{{ $_SESSION['prenom'] }} {{ $_SESSION['nom'] }}</h3>
-                        {{-- <p>{{ $_SESSION['role'] }} </p> --}}
                     </div>
                     <div class="my-5">
                         <a href="deconnexion" class="m-2"><i class="bi bi-box-arrow-right text-white "

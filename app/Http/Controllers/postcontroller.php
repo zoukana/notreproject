@@ -111,7 +111,6 @@ class postcontroller extends Controller
    foreach($users as $user) {
     if ($user->email == $request->get("email") && $user->password == $request->get("password")){
 
-                //dd(session('matricule'));
         if($user->role === 'administrateur' && $user->etat === 1){
             Session_start();
             $_SESSION['nom'] = $user->nom;
@@ -129,7 +128,9 @@ class postcontroller extends Controller
             $_SESSION['prenom'] = $user->prenom;
             $_SESSION['matricule'] = $user->matricule;
             $_SESSION['photo'] = $user->photo;
-            $users = assane::where('matricule', '!=' , $_SESSION['matricule'])->where('etat', '=', "1")->paginate(8);
+            $_SESSION['role'] = $user->role;
+                 /*    dd($_SESSION['role']); */
+            $users = assane::where('matricule', '!=' , $_SESSION['matricule'])->where('etat', '=', "1")->paginate(5);
             return redirect('/api/userSimple');}
             else{
                 $validation = $request->validate([
